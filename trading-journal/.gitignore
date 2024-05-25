@@ -1,23 +1,25 @@
-# Ignore Python bytecode files
-*.pyc
+# Ignore database files
+*.db
 
-# Ignore other common Python files and directories
+# Ignore compiled Python files
 __pycache__/
-*.pyo
-*.pyd
+*.py[cod]
 
-# Ignore virtual environment directories
-venv/
-env/
-.venv/
-.env/
+# Ignore environment variables
+.env
 
-# Ignore Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-# Ignore logs
-*.log
-
-# Ignore IDE settings directories
+# Ignore IDE specific files
 .vscode/
 .idea/
+
+# Ignore node_modules
+frontend/node_modules/
+
+# Ignore build output
+build/
+dist/
+
+# Other potential files to ignore
+.DS_Store  # macOS specific
+*.log      # Log files
+coverage/  # Test coverage results

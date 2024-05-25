@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from . import models, schemas
+from app import models, schemas
 
 def get_trade(db: Session, trade_id: int):
     return db.query(models.Trade).filter(models.Trade.id == trade_id).first()

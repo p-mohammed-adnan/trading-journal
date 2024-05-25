@@ -4,7 +4,6 @@ from typing import List
 from app import crud, models, schemas
 from app.database import SessionLocal, engine
 
-
 models.Base.metadata.create_all(bind=engine)
 
 router = APIRouter()

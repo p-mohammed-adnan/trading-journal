@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from datetime import datetime
+from typing import Optional
 
 class TradeBase(BaseModel):
     date: datetime
@@ -8,7 +9,7 @@ class TradeBase(BaseModel):
     exit_price: float
     quantity: int
     trade_type: str
-    notes: str
+    notes: Optional[str] = None  # Make notes optional
     status: bool
 
 class TradeCreate(TradeBase):
@@ -18,4 +19,4 @@ class Trade(TradeBase):
     id: int
 
     class Config:
-        from_attributes = True  # Updated for Pydantic V2
+        from_attributes = True
